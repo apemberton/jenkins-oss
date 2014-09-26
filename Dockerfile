@@ -8,7 +8,7 @@ USER jenkins
 WORKDIR /usr/lib/jenkins
 RUN curl -L -O -w "Downloaded: %{url_effective}\\n" "http://mirrors.jenkins-ci.org/war/latest/jenkins.war"
 
-EXPOSE 8080 22 49187
+EXPOSE 8080 22
 ENV JENKINS_HOME /var/lib/jenkins
 
 ENTRYPOINT ["java", "-jar", "jenkins.war", "--httpPort=8080"]
